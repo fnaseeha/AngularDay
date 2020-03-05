@@ -1,0 +1,14 @@
+UserName : <input type="text" [(ngModel)]="UserName">
+<button (click)="search()">Search</button>
+<div *ngIf="response">
+  <p>Login Name : {{response.login}}</p>
+  <p>Number of Repos : {{response.public_repos}}</p>
+  <p>Number of gists : {{response.public_gists}}</p>
+  <p>Number of followers : {{response.followers}}</p>
+  <p>Number of following : {{response.following}}</p>
+  <h3><b>Followers</b></h3>
+  <div *ngIf="followers.length">
+    <li *ngFor="let f of followers">{{f}}</li>
+  </div>
+
+</div>
