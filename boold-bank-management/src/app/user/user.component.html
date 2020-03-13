@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>User Details</title>
+  </head>
+
+  <body>
+    <div class="text1">
+      <h1><b><u>User Details</u></b></h1>
+    </div>
+
+    <div class="limiter">
+      <div class="container-table100">
+        <div class="wrap-table100">
+          <div class="table100 ver1 m-b-110">
+            <div class="table100-head">
+              <table  >
+                <thead>
+                  <tr class="row100 head">
+                    <th class=" column1">Nic</th>
+                    <th class=" column2">Name</th>
+                    <th class=" column3">Blood Group</th>
+                    <th class=" column4">Date of Birth</th>
+                    <th class=" column5">Email</th>
+                    <th class=" column6">Action</th>
+
+                  </tr>
+                </thead>
+              </table>
+            </div>
+
+            <div class="table100-body js-pscroll">
+              <table *ngFor="let user of users" >
+                <tbody>
+                  <tr class="row100 body">
+                    <td class=" column1">{{ user.nic }}</td>
+                    <td class=" column2">{{ user.name }}</td>
+                    <td class=" column3">{{ user.bloodGroup }}</td>
+                    <td class=" column4">{{ user.dateOfBirth }}</td>
+                    <td class=" column5">{{ user.email }}</td>
+                    <th class=" column5">Delete</th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
